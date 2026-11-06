@@ -1,18 +1,22 @@
-// Function to generate a sequence of numbers up to limit n
-// Intended behavior: Print all numbers from 1 up to and including n
+# Function to check if a word or phrase is a palindrome
+# Intended behavior: Compare cleaned string with its reverse version
 
-function printSequence(limit) {
-    console.log("Starting sequence printing up to " + limit);
+def is_valid_palindrome(input_string):
+    # Remove non-alphanumeric characters and convert to lowercase
+    cleaned = "".join(char.lower() for char in input_string if char.isalnum())
     
-    // Bug: Off-by-one error (condition i < limit excludes the number limit itself)
-    for (let i = 1; i < limit; i++) {
-        console.log("Current item: " + i);
-    }
+    # Bug: Incorrect slicing step [::-2] skips characters during reversal
+    reversed_string = cleaned[::-2]
     
-    console.log("Sequence printing complete.");
-}
+    print(f"Cleaned: {cleaned}")
+    print(f"Reversed: {reversed_string}")
+    
+    return cleaned == reversed_string
 
-// Executing test cases
-const targetLimit = 5;
-printSequence(targetLimit);
-// Expected output: 1, 2, 3, 4, 5
+
+# Test cases
+word1 = "racecar"
+word2 = "A man a plan a canal Panama"
+
+print(f"Is '{word1}' palindrome?", is_valid_palindrome(word1))
+print(f"Is '{word2}' palindrome?", is_valid_palindrome(word2))
