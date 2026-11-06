@@ -1,7 +1,18 @@
-def is_palindrome(text):
-    clean_text = text.lower()
-    # Bug: Incorrect slicing step and logic
-    reversed_text = clean_text[::-2]
-    return clean_text == reversed_text
+// Function to generate a sequence of numbers up to limit n
+// Intended behavior: Print all numbers from 1 up to and including n
 
-print(is_palindrome("racecar")) # Should return True
+function printSequence(limit) {
+    console.log("Starting sequence printing up to " + limit);
+    
+    // Bug: Off-by-one error (condition i < limit excludes the number limit itself)
+    for (let i = 1; i < limit; i++) {
+        console.log("Current item: " + i);
+    }
+    
+    console.log("Sequence printing complete.");
+}
+
+// Executing test cases
+const targetLimit = 5;
+printSequence(targetLimit);
+// Expected output: 1, 2, 3, 4, 5
