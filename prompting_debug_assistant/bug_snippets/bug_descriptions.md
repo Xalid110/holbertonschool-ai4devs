@@ -1,5 +1,3 @@
-# Bug Descriptions
-
 ## Bug 1 – bug1.py
 **Intended Behavior**: Calculate the average of a list of numbers and return 0 if the list is empty.  
 **Issue Type**: Runtime exception (ZeroDivisionError).  
