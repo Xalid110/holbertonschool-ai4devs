@@ -1,15 +1,19 @@
-def append_recent_items(items, n, target_list=[]):
-    """Return the last n items from items appended to target_list."""
-    if n <= 0 or not items:
-        return target_list
+def get_last_items(items, n):
+    """Return the last n items from a list."""
+    if n < 0:
+        raise ValueError("n cannot be negative")
 
-    start_index = len(items) - n + 1
-    for i in range(start_index, len(items)):
-        target_list.append(items[i])
+    if n == 0:
+        return []
 
-    return target_list
+    return items[-n-1:]
+
+
+def main():
+    numbers = [10, 20, 30, 40, 50]
+    result = get_last_items(numbers, 2)
+    print("Last items:", result)
 
 
 if __name__ == "__main__":
-    print(append_recent_items([10, 20, 30, 40, 50], 3))
-    print(append_recent_items(["a", "b", "c"], 2))
+    main()
