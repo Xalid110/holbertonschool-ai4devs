@@ -1,49 +1,51 @@
 Codebase Overview - Legacy WordPress
 1. Project Information
-
 Project: WordPress
 Programming Language: PHP
 Project Type: Open-source Content Management System (CMS)
 Repository: https://github.com/WordPress/wordpress-develop
-
 2. Age of Project
-Initial release: May 27, 2003.
+Initial Release: May 27, 2003
+Project Age: Approximately 23 years (as of 2026).
 WordPress is a long-running open-source project.
 The codebase has evolved over many years while maintaining backward compatibility.
-Older architectural decisions still influence parts of the system.
 3. Codebase Size (LOC)
-The project contains a large PHP codebase.
-The exact Lines of Code (LOC) depends on the repository version and whether tests, build tools, and third-party files are included.
-A precise LOC count has not been independently measured for this overview.
+Estimated PHP LOC: Approximately 500,000 lines.
+Primary Language: PHP
+Codebase Type: Large-scale legacy and actively maintained application.
+LOC is an approximate estimate, not an independently measured count.
 4. Main Dependencies
-PHP: Main programming language and runtime.
-MySQL / MariaDB: Database storage.
-JavaScript: Interactive frontend functionality.
-jQuery: Used by legacy frontend components.
-Composer: Dependency management in parts of the development ecosystem.
-PHPUnit: Automated testing framework.
+Dependency	Purpose
+PHP	Main programming language
+MySQL / MariaDB	Database storage
+JavaScript	Frontend functionality
+jQuery	Legacy frontend interactions
+Composer	Dependency management
+PHPUnit	Automated testing
 5. Known Issues and Pain Points
-Legacy Architecture
+5.1 Legacy Architecture
 Some older modules use outdated architectural patterns.
-Historical design decisions make certain components difficult to refactor.
-Backward Compatibility
-Maintaining compatibility with older themes and plugins increases development complexity.
+Historical design decisions make components difficult to refactor.
+5.2 Backward Compatibility
+Maintaining compatibility with older themes and plugins increases complexity.
 Changes in core functionality can affect third-party extensions.
-Technical Debt
+5.3 Technical Debt
 Some modules contain tightly coupled functionality.
 Older code may follow inconsistent coding conventions.
-Testing Challenges
-Large integration tests can require additional environment configuration.
+5.4 Testing Challenges
+Integration tests require additional environment configuration.
 Testing interactions between plugins and core functionality can be complicated.
-Security and Maintenance
+5.5 Security and Maintenance
 Third-party plugins may introduce security vulnerabilities.
 Regular updates and dependency maintenance are important.
-6. Potential Modernization Opportunities
+6. Modernization Opportunities
 Improve modular architecture.
 Increase automated test coverage.
 Reduce tightly coupled components.
 Modernize outdated JavaScript and PHP patterns.
-Improve documentation and code maintainability.
+Improve documentation and maintainability.
 7. Conclusion
 
 WordPress is a mature open-source project with a large and evolving codebase. Its long history, extensive plugin ecosystem, and backward compatibility requirements make it a useful example for studying legacy software maintenance and modernization.
+
+Note: The LOC figure above is an approximate estimate and should be verified against a specific repository revision before being treated as an audited metric.
