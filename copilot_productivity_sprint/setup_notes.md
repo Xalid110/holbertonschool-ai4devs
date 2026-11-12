@@ -1,27 +1,29 @@
-## Step-by-Step Setup Process
+AI Coding Assistant Setup Notes
+Environment & Tool Versions
 
-### 1. Prerequisites
-- Active **GitHub account** with GitHub Copilot enabled (Free, Pro, Business, or Enterprise).
-- **Visual Studio Code** installed and accessible via CLI (\`code\`).
+Component	Name / Identifier	Version
+Operating System	Linux / Windows / macOS	Your OS version
+IDE	Visual Studio Code	Your VS Code version
+Primary Extension	GitHub Copilot (GitHub.copilot)	Your installed version
+Chat Extension	GitHub Copilot Chat (GitHub.copilot-chat)	Your installed version
+Git	Git CLI	Your Git version
+Step-by-Step Setup Process
+1. Prerequisites
+Active GitHub account with GitHub Copilot enabled.
+Visual Studio Code installed.
+2. Extension Installation
+Open Visual Studio Code.
+Navigate to Extensions (Ctrl+Shift+X).
+Search for GitHub Copilot.
+Install GitHub Copilot and GitHub Copilot Chat.
+3. Authentication & Account Linking
+Open the Accounts menu in VS Code.
+Select Sign in with GitHub.
+Authorize Visual Studio Code.
+Verify that GitHub Copilot is active.
+4. Configuration (settings.json)
 
-### 2. Extension Installation
-1. Open Visual Studio Code and navigate to the **Extensions** view (\`Ctrl+Shift+X\` / \`Cmd+Shift+X\`).
-2. Search for **GitHub Copilot** (published by \`GitHub\`) and click **Install** (this automatically bundles **GitHub Copilot Chat**).
-3. Alternatively, install via terminal:
-   \`\`\`bash
-   code --install-extension GitHub.copilot
-   code --install-extension GitHub.copilot-chat
-   \`\`\`
-
-### 3. Authentication & Account Linking
-1. Click the **Accounts** icon in the bottom-left Activity Bar of VS Code.
-2. Select **Sign in with GitHub** and authorize Visual Studio Code in the browser.
-3. Confirm the Copilot status icon in the bottom-right Status Bar displays as active (\`GitHub Copilot: Ready\`).
-
-### 4. Configuration (\`settings.json\`)
-Configured VS Code user settings to enable inline suggestions across programming languages while disabling noise in plain text files:
-
-\`\`\`json
+json
 {
   "github.copilot.enable": {
     "*": true,
@@ -31,9 +33,8 @@ Configured VS Code user settings to enable inline suggestions across programming
   "editor.inlineSuggest.enabled": true,
   "github.copilot.editor.enableAutoCompletions": true
 }
-\`\`\`
-
-### 5. Verification
-1. **Inline Autocomplete:** Opened a Python/JavaScript file, wrote a function comment, and verified inline ghost-text completion (\`Tab\` to accept).
-2. **Copilot Chat:** Opened the Chat panel (\`Ctrl+Alt+I\` / \`Ctrl+Cmd+I\`), tested workspace context prompts, and confirmed response generation.
-EOF
+5. Verification
+Tested inline autocomplete in a Python or JavaScript file.
+Verified ghost-text suggestions.
+Tested GitHub Copilot Chat.
+Confirmed that Copilot generates responses successfully.
