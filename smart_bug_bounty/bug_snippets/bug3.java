@@ -1,22 +1,21 @@
-import java.util.List;
 
-public class UserRoleChecker {
+public class Bug3 {
 
-    public static boolean hasAdminAccess(List<String> roles, String requiredRole) {
-        if (roles.isEmpty() || requiredRole == null) {
-            return false;
+    public static int calculateSum(int[] numbers) {
+        int sum = 0;
+
+        for (int i = 0; i <= numbers.length; i++) {
+            sum += numbers[i];
         }
 
-        for (String role : roles) {
-            if (role == requiredRole) {
-                return true;
-            }
-        }
-        return false;
+        return sum;
     }
 
     public static void main(String[] args) {
-        List<String> userRoles = List.of("editor", new String("admin"));
-        System.out.println("Is Admin: " + hasAdminAccess(userRoles, "admin"));
+        int[] values = {10, 20, 30, 40};
+
+        int result = calculateSum(values);
+
+        System.out.println("Sum: " + result);
     }
 }
